@@ -1,0 +1,171 @@
+\documentclass[10pt]{article}
+\newcommand\mpfact{.81}
+\newcommand\mpfactadj{.82}
+
+\usepackage{geometry}
+\geometry{
+    a4paper, 
+    margin=.5in, 
+    voffset = -.125in
+}
+
+\pagenumbering{gobble}
+\usepackage{ragged2e}
+\justifying
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true}
+\urlstyle{same}
+
+\usepackage{multirow}
+
+% Lists
+\usepackage{enumitem}
+
+\newenvironment{p_item}{
+\begin{itemize}[leftmargin=30pt]
+    \vspace{-.2cm}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+% Underlines
+\usepackage{calc}
+\newlength{\remaining}
+\newcommand{\titleline}[1]{%
+	\setlength{\remaining}{\linewidth-\widthof{\textsc{#1}}}
+	\noindent\underline{\textsc{#1}\hspace*{\remaining}}\par
+} 
+
+\newcommand{\myheading}[1]{%
+    \titleline{\Large{\textbf{#1}}}\smallskip
+}
+
+\newcommand\mysubheading[1]{%
+    \begin{minipage}{\mpfact\textwidth}
+        \titleline{#1}
+    \end{minipage} 
+    
+    \smallskip
+}
+
+\newcommand\mydate[1]{%
+    \hfill\emph{\small{#1}}
+}
+
+\newenvironment{p_item2}{
+    \begin{minipage}{\mpfactadj\textwidth}\vspace{.3cm}\begin{p_item}
+}{
+    \end{p_item}\end{minipage}\medskip
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
+\begin{document}
+\small
+	
+	% Title 1 
+    \begin{table}[t]
+        \centering
+        \begin{tabular}{c|l}
+            \multirow{4}{*}{\huge{\textbf{JOSEPH LAVOND}}} & Phone: 209-269-7175\\
+            & Email: joelavond@gmail.com \\
+            & GitHub: \url{github.com/JoeLavond} \\
+            & LinkedIn: \url{linkedin.com/in/josephlavond1997} 
+        \end{tabular}
+        \vspace{-.3cm}
+    \end{table}
+	
+	\myheading{Summary}
+    \noindent I live to learn daily and discover practical solutions to problems. I am dedicated to making lasting contributions and thrive in fast-paced environments that provide constant challenges and opportunities for growth. 
+    
+    \smallskip\noindent       
+    Favorite Tools: SQL, Git, Python (pytorch, pyspark, sklearn, pandas, numpy, matplotlib), and R (tidyverse, caret, ggplot)
+	%
+    
+    %
+    \medskip
+    \myheading{Education}
+	
+	\mysubheading{University of North Carolina - Chapel Hill, NC} 
+	Doctor of Philosophy: \textbf{Statistics and Operations Research} \mydate{Aug 2020 - May 2025}
+	\begin{p_item2}
+		\item Master's exams in Theoretical and Applied Statistics
+		\item Advanced course work on Machine Learning, Deep Learning, and Non-Parametric Statistics
+	\end{p_item2}
+	
+	\mysubheading{California Polytechnic State University - San Luis Obispo, CA}
+	Bachelor of Science: \textbf{Statistics} \mydate{Sep 2016 - Mar 2020}
+	\begin{p_item2}
+		\item 3.99 GPA, Summa Cum Laude, Academic Excellence Award
+		\item Founder and Secretary of the Actuarial Society Club
+		\item Member of Mu Sigma Rho, the US National Statistics Honors Society
+	\end{p_item2}
+	
+    %
+    \myheading{Professional Experience}
+
+    \mysubheading{University of North Carolina - Chapel Hill, NC}
+    Research under Dr.\hspace{1pt}Yao Li \mydate{Aug 2021 - Present}
+    \begin{p_item2}
+        \item Participating in the development of methodology to improve the robustness of Neural Networks
+        \item Developed defense threshold to prevent backdoor attacks in Federated Learning (for submission to ICLR, a machine learning conference, 2023)
+        \item PyTorch implementation, training, and evaluation of many computer vision models (ResNet, VGG, etc.) on large databases (ImageNet, CIFAR, etc.) for object recognition research 
+    \end{p_item2}
+    
+    NSF-Funded Research Training Group \mydate{Sept 2021 - Present}
+    \begin{p_item2}
+        \item Funding through $\$$2M grant to add research to theory and application of networks 
+        \item Actively participate in seminars and intensive courses to learn from leaders in network research
+    \end{p_item2}
+    
+    Graduate Teaching Fellow \mydate{Jan 2022 - May 2022}
+    \begin{p_item2}
+        \item Solely responsible for teaching Introduction to Statistics and Data Science to 46 undergraduates
+        \item Wrote 40 lectures, 3 exams, and a project to facilitate student learning and engagement
+    \end{p_item2}
+    
+    Graduate Teaching Assistant \mydate{Aug 2020 - Dec 2021}
+    \begin{p_item2}
+        \item Taught and evaluated a introductory data science computer lab in Python for undergraduates.
+    \end{p_item2}
+    
+    %
+    \mysubheading{Elevance Health, Inc. (Formerly Anthem) - Indianapolis, IN}
+    Graduate Info Technology Intern (Remote) \mydate{June 2022 - Present}
+    \begin{p_item2}
+        \item Implement Bayesian anomaly detection approach on Amazon Web Service (AWS) to Evaluation \& Management (E/M) claims to identify potentially up-coded claims for down-coding
+        \item Conduct bias and explain-ability analyses on resulting models to ensure that they perform similarly on different genders and ethnicities. 
+        \item Participate in Agile Scrum model development process using Jira of a Fortune-30 company
+        \item Create modeling datasets using PySpark in Jupyter Notebooks on Kubeflow
+    \end{p_item2}
+    
+    %
+    \mysubheading{Blue Cross Blue Shield of Arizona - Phoenix, AZ}
+    Actuarial Services Intern (Remote) \mydate{Apr 2020 - Aug 2020}
+    \begin{p_item2}
+        \item Took over the job responsibilities of an Actuary who left the team early into the internship, which included providing the organization with the projected membership for all lines of business
+        \item Automated monthly updates to company forecasts alleviating the team from manual burden even after the duration of my internship by learning VBA in Microsoft Excel
+        \item Automated data collection using process flows in SAS and SQL queries in Microsoft Access
+    \end{p_item2}
+    
+    %
+    \mysubheading{California Polytechnic State University - San Luis Obispo, CA}
+    Statistical Consultant \mydate{Sep 2019 - Aug 2020}
+    \begin{p_item2}
+        \item Provided SAS mixed modeling analyses and coauthored NIH funded infant feeding study to better understand the relationships between early life factors and childhood obesity as part of a $\$$2M grant (\href{http://doi.org/10.1111/mcn.13185}{http://doi.org/10.1111/mcn.13185})
+        \item Provided statistical support on generalized linear models for the theses of graduate students
+    \end{p_item2}
+    
+    Frost Summer Research Program 2019 \mydate{May 2019 - Sep 2019}
+    \begin{p_item2}
+        \item Manipulate the Surveillance, Epidemiology, and End Results (SEER) database, containing over 20 million cancer cases within the United States, using SAS
+        \item Analyze SEER data with KM and COX survival models using R
+        \item Construct an interactive R Shiny app for cancer patient use, taking demographic and diagnosis information as inputs, and providing a prognosis
+    \end{p_item2}
+    
+    
+    % 
+    
+\end{document}
+    	
