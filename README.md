@@ -1,1 +1,3 @@
-<img alt="lavond-joseph-resume.pdf" src="out/lavond-joseph-resume.pdf"/>
+<figure align="center">
+    <img src="out/page-1.png" width="100%" />
+</figure>
