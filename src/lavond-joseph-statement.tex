@@ -1,0 +1,51 @@
+\documentclass[10pt]{article}
+
+\title{\vspace{-1in}Joseph Lavond}
+\author{Research Statement: 2020 - Present}
+\date{}
+
+%\usepackage{titling}
+\usepackage[fullpage]{geometry}
+\pagenumbering{gobble}
+\usepackage{enumitem}
+
+\begin{document}
+
+    \maketitle
+
+    \paragraph{}
+    My research interests are primarily focused on the improvement of deep learning.
+    As the current trend toward expanded prevalence and integration of algorithms requiring large volumes of data continues, I believe that
+    \begin{enumerate}
+        \item Individuals and entities will need confidence in the security of models and protection of data being used
+        \item It will become increasingly important to facilitate learning under restricted access to data and from synthetic data
+    \end{enumerate}
+    To this effect, I find great curiosity in federated learning, which allows for private learning from distributed data sets and generative models that can produce high-quality synthetic data.
+    I am particularly interested in developing efficient algorithms motivated by statistical guarantees. 
+
+    \paragraph{Past Research}
+    The first challenge for federated learning is that, without access to user data, it may be easier for a malicious participant to provide updates that intentionally harm a shared model.
+    One example of such an attack includes backdoor attacks, which give a model a learned association between a specific manipulation of any input and an undesirable output. 
+    Federated learning, unlike other applications, allows for multiple malicious actors to work together to achieve harmful changes to the model.
+    Existing backdoor defense could not generally be applied in federated learning without violating data privacy.
+    Our proposed defense is able to filter out malicious users from updating the shared model, even when 40 percent of users are malicious, and was accepted at the Workshop on Federated Learning at NeurIPS 2022.
+
+    The next challenge for federated learning is learning a shared model when user data is not independent and not identically distributed.
+    In this case, several personalized federated learning solutions exist that learn additional models to improve performance, but at additional cost. 
+    Similarly, meta-learning solutions require extra computation to learn a good initialization to be fine-tuned by each user.
+    We propose a way to balance the emphasis on initial model accuracy and rapid personalization by only modifying the sequence of locally computed gradients at negligible additional cost.
+    We are working on getting our efforts accepted at KDD 2024. 
+
+    \paragraph{Current Research}
+    An example of a generative model used to create synthetic data for training is the Generative Adversarial Network (GAN), which attempts to learn a distribution from the training data to sample from.
+    However, many generative models are weak to membership inversion attacks, which reveal information about the training data used.
+    The best defense currently is differential privacy, which protects individual privacy in statistical databases. 
+    We believe we have found an advantage specific to GANs that can minimize the downside of training with differential privacy.
+
+    \paragraph{Future Research}
+    I look forward to investigating further improvements in federated learning and generative models. 
+    In addition, I hope to find creative solutions to other generative models, like large language and diffusion models, that are becoming widely popular.
+    With stronger guarantees for security and privacy, I believe the public will learn to love such models not just for their inspiring performance but also to feel at ease regarding safety with their widespread adoption. 
+
+\end{document}    
+    	
