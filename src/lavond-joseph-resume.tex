@@ -14,17 +14,12 @@
     \togglefalse{notnotes}
 }
 
-\newcommand\mpfact{.81}
+\newcommand\mpfact{.80}
 \newcommand\mpfactadj{.82}
 
 \usepackage[T1]{fontenc}
 
-\usepackage{geometry}
-\geometry{
-    a4paper, 
-    margin=.25in, 
-    %voffset=.25in
-}
+\usepackage[margin=.5in]{geometry}
 
 \pagenumbering{gobble}
 \usepackage{ragged2e}
@@ -128,7 +123,8 @@
     Ph.D.\ Intern \mydate{June 2023 - Aug 2023}
     \begin{p_item2}
         \item Lead research efforts to improve the diversity of samples produced by generative artificial intelligence
-        \item Designed architecture changes that prevent the occurrence of mode collapse in Generative Adversarial Networks (GANs)
+        \item Evaluated changes to prevent the occurrence of mode collapse in Generative Adversarial Networks
+        \item Researching more efficient ways to train generative models with Differential Privacy
     \end{p_item2}
     
     %
@@ -184,6 +180,28 @@
         \item Learned VBA to automate monthly updates to company forecasts within Microsoft Excel 
         \item Automated data collection using process flows in SAS and SQL queries in Microsoft Access
     \end{p_item2}
+
+        %
+    \mysubheading{California Polytechnic State University - San Luis Obispo, CA}
+    Frost Summer Research Program 2019 \mydate{May 2019 - Sep 2019}
+    \begin{p_item2}
+        \item Manipulated the Surveillance, Epidemiology, and End Results (SEER) database, containing over 20 million cancer cases within the United States, using SAS
+        \item Analyzed SEER data with KM\iftoggle{notes}{ \textcolor{blue}{(Empirical survival curve)}}{} and COX\iftoggle{notes}{ \textcolor{blue}{(Proportional hazards = instantaneous failure rate)}}{} survival models using R
+        \iftoggle{notes}{
+        
+            \smallskip \textcolor{blue}{
+                Situation: Large database on many historical cancers cases in US \\
+                Task: Present sensitive information in an informative manner \\
+                Act: Coordinate use of multiple statistical tools to process and model large data \\
+                Result: Interactive interface to visualize prognosis and impact of various treatment options \\
+                Reflect: More complex models needed to give accurate estimates
+            } 
+        \smallskip
+        }
+        
+        \item Constructed an interactive R Shiny app for cancer patient use, taking demographic and diagnosis information as inputs, and providing a prognosis
+    \end{p_item2}
+    
     
     
     %
@@ -208,20 +226,14 @@
     	
 	
     % 
-    \myheading{Research}
+    \myheading{Publications}
 
     %
     \mysubheading{University of North Carolina - Chapel Hill, NC}
-    Research under Dr.\hspace{1pt}Yao Li \mydate{Aug 2021 - Present} \\
-    asdf \\
+    Improving the robustness and privacy of neural networks under Dr.\hspace{1pt}Yao Li \mydate{\phantom{1pt}}
     \begin{p_item2}
 
-        \item[] FedDecay: Adapting to Data Heterogeneity in Federated Learning With Gradient Decay, Joseph Lavond, Minhao Cheng, Yao Li, \textit{Under Review}
-    
-        \item[] Trusted Aggregation (TAG): Backdoor Defense in Federated Learning, Joseph Lavond, Minhao Cheng, Yao Li, \textit{In NeurIPS Workshop on Federated Learning: Recent Advances and New Challenges, 2022}
-        
-        \item Development of methodology to improve the robustness and data privacy of Neural Networks
-        \item Proposed Meta-Learning approach to model aggregation for Personalized Federated Learning (Submitted to ICLR 2024)
+        \item FedDecay: Adapting to Data Heterogeneity in Federated Learning With Gradient Decay, Joseph Lavond, Minhao Cheng, Yao Li, \textit{Under Review}
         \iftoggle{notes}{
         
             \smallskip \textcolor{blue}{
@@ -232,9 +244,8 @@
             } 
         \smallskip
         }
-        
-        \item Created novel defense against Backdoor Attacks in Federated Learning
-
+    
+        \item Trusted Aggregation (TAG): Backdoor Defense in Federated Learning, Joseph Lavond, Minhao Cheng, Yao Li, \textit{In NeurIPS Workshop on Federated Learning: Recent Advances and New Challenges, 2022}
         \iftoggle{notes}{
         
             \smallskip \textcolor{blue}{
@@ -246,50 +257,9 @@
             } 
         \smallskip
         }
-        
-        \item PyTorch implementation and multi-GPU training of computer vision models on Linux clusters
     \end{p_item2}
     
     % 
-    \mysubheading{California Polytechnic State University - San Luis Obispo, CA}
-    Statistical Consultant \mydate{Sep 2019 - Aug 2020}
-    \begin{p_item2}
-        \item Provided SAS mixed modeling analyses to understand the relationships between early life factors and childhood obesity as part of a NIH-funded $\$$2M grant
-        \iftoggle{notes}{
-        
-            \smallskip \textcolor{blue}{
-                Situation: Follow mother-infant pairs over time monitoring breast and bottle feeding practices \\
-                Task: Statistical inference to determine meaningful relationships in feeding behavior \\
-                Act: Create mixed model to remove between subject variation and use backwards selection \\
-                Result: Familiarity (frequency bottle feeding and multi-child mothers) have higher intakes \\
-                Reflect: Many models can answer the same question, however, some give more desirable interpretations
-            } 
-        \smallskip
-        }
-        
-        \item Coauthored publication in the Journal of Maternal and Child Nutrition %(\href{https://doi.org/10.1111/mcn.13185}{doi:10.1111/mcn.13185})
-    \end{p_item2}
-    
-    %
-    Frost Summer Research Program 2019 \mydate{May 2019 - Sep 2019}
-    \begin{p_item2}
-        \item Manipulated the Surveillance, Epidemiology, and End Results (SEER) database, containing over 20 million cancer cases within the United States, using SAS
-        \item Analyzed SEER data with KM\iftoggle{notes}{ \textcolor{blue}{(Empirical survival curve)}}{} and COX\iftoggle{notes}{ \textcolor{blue}{(Proportional hazards = instantaneous failure rate)}}{} survival models using R
-        \iftoggle{notes}{
-        
-            \smallskip \textcolor{blue}{
-                Situation: Large database on many historical cancers cases in US \\
-                Task: Present sensitive information in an informative manner \\
-                Act: Coordinate use of multiple statistical tools to process and model large data \\
-                Result: Interactive interface to visualize prognosis and impact of various treatment options \\
-                Reflect: More complex models needed to give accurate estimates
-            } 
-        \smallskip
-        }
-        
-        \item Constructed an interactive R Shiny app for cancer patient use, taking demographic and diagnosis information as inputs, and providing a prognosis
-    \end{p_item2}
-    
     
     
     %
@@ -297,8 +267,8 @@
     
     \mysubheading{Coursework}
     \begin{p_item2}
-        \item Machine Learning: Gradient Boosting\iftoggle{notes}{ \textcolor{blue}{(Penalize mistakes heavier for later models)}}, Bagging\iftoggle{notes}{ \textcolor{blue}{(Bootstrap aggregation)}}, Bootstrapping, Regularization\iftoggle{notes}{ \textcolor{blue}{(Penalize against large or unwanted solutions)}}, Dimension Reduction 
-        \item Deep Learning: Semi-Supervised\iftoggle{notes}{ \textcolor{blue}{(Partially labeled)}}, Self-Supervised\iftoggle{notes}{ \textcolor{blue}{(Learn pseudo-labels)}}, and Transfer Learning for NLP and Computer Vision
+        \item Machine Learning: Gradient Boosting\iftoggle{notes}{ \textcolor{blue}{(Penalize mistakes heavier for later models)}}, Bagging\iftoggle{notes}{ \textcolor{blue}{(Bootstrap aggregation)}}, Bootstrapping, and Regularization\iftoggle{notes}{ \textcolor{blue}{(Penalize against large or unwanted solutions)}}
+        \item Deep Learning: Semi and Self-Supervised\iftoggle{notes}{ \textcolor{blue}{(Partially and Psuedo-labeled)}}, and Transfer Learning for NLP and Computer Vision
     \end{p_item2}
     
     \mysubheading{Programming Languages}
@@ -309,7 +279,7 @@
         \item Other: SAS, Microsoft Excel
     \end{p_item2}
     
-    \textsc{Misc.} Git (GitHub, Bitbucket), Linux (Cluster Computing, GPU Acceleration), Vim, Project Jupyter, Kubeflow
+    \textsc{Misc.} Git (GitHub, Bitbucket), Linux (Cluster Computing), Vim, Project Jupyter, Kubeflow
     
     
     
