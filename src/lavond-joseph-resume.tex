@@ -34,7 +34,7 @@
 % Lists
 \usepackage{enumitem}
 
-\newenvironment{p_item}{
+\newenvironment{pitem}{
 \begin{itemize}[leftmargin=30pt]
     \vspace{-.2cm}
     \setlength{\itemsep}{1pt}
@@ -68,10 +68,10 @@
     \hfill\emph{\small{#1}}
 }
 
-\newenvironment{p_item2}{
-    \begin{minipage}{\mpfactadj\textwidth}\vspace{.3cm}\begin{p_item}
+\newenvironment{pitemtwo}{
+    \begin{minipage}{\mpfactadj\textwidth}\vspace{.3cm}\begin{pitem}
 }{
-    \end{p_item}\end{minipage}\medskip
+    \end{pitem}\end{minipage}\medskip
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
@@ -99,18 +99,18 @@
         \textcolor{blue}{
         \vspace{-\baselineskip} \\
             Common Questions:
-            \begin{p_item}%
+            \begin{pitem}%
                 \item About me: School, advisor, and research, then consulting and internships, finally automotive
                 \item Goals: Set industry standards for autonomy, improving access and safety of transportation
                 \item Strengths: Background, presentation, work great on a team or as an individual
                 \item Weaknesses: Time management and leadership skills
-            \end{p_item} 
+            \end{pitem} 
             My Questions:
-            \begin{p_item}
+            \begin{pitem}
                 \item How do you cope with winter? What is your favorite thing to do in February?
                 \item What do you see as the next big step for Zero-Zero-Zero?
                 \item Current trend for office vs. home work?
-            \end{p_item}
+            \end{pitem}
         }   
         
         \smallskip
@@ -121,16 +121,16 @@
     %
     \mysubheading{Cisco - San Jose, CA}
     Ph.D.\ Intern \mydate{June 2023 - Aug 2023}
-    \begin{p_item2}
+    \begin{pitemtwo}
         \item Lead research efforts to improve the diversity of samples produced by generative artificial intelligence
         \item Evaluated changes to prevent the occurrence of mode collapse in Generative Adversarial Networks
         \item Researching more efficient ways to train generative models with Differential Privacy
-    \end{p_item2}
+    \end{pitemtwo}
     
     %
     \mysubheading{Elevance Health, Inc. (Formerly Anthem) - Indianapolis, IN}
     Graduate Info Technology Intern \mydate{June 2022 - Aug 2022}
-    \begin{p_item2}
+    \begin{pitemtwo}
         \item Implemented custom PyTorch semi-supervised Bayesian anomaly detection approach on Amazon Web Service (AWS) to identify up-coded Evaluation \& Management (E/M) claims
         \iftoggle{notes}{
         
@@ -158,12 +158,12 @@
         \smallskip
         }
         
-    \end{p_item2}
+    \end{pitemtwo}
     
     %
     \mysubheading{Blue Cross Blue Shield of Arizona - Phoenix, AZ}
     Actuarial Services Intern \mydate{Apr 2020 - Aug 2020}
-    \begin{p_item2}
+    \begin{pitemtwo}
         \item Spearheaded the company-wide projection of membership for all lines of business
         \iftoggle{notes}{
         
@@ -179,12 +179,12 @@
         
         \item Learned VBA to automate monthly updates to company forecasts within Microsoft Excel 
         \item Automated data collection using process flows in SAS and SQL queries in Microsoft Access
-    \end{p_item2}
+    \end{pitemtwo}
 
         %
     \mysubheading{California Polytechnic State University - San Luis Obispo, CA}
     Frost Summer Research Program 2019 \mydate{May 2019 - Sep 2019}
-    \begin{p_item2}
+    \begin{pitemtwo}
         \item Manipulated the Surveillance, Epidemiology, and End Results (SEER) database, containing over 20 million cancer cases within the United States, using SAS
         \item Analyzed SEER data with KM\iftoggle{notes}{ \textcolor{blue}{(Empirical survival curve)}}{} and COX\iftoggle{notes}{ \textcolor{blue}{(Proportional hazards = instantaneous failure rate)}}{} survival models using R
         \iftoggle{notes}{
@@ -200,7 +200,7 @@
         }
         
         \item Constructed an interactive R Shiny app for cancer patient use, taking demographic and diagnosis information as inputs, and providing a prognosis
-    \end{p_item2}
+    \end{pitemtwo}
     
     
     
@@ -211,17 +211,17 @@
     	\mysubheading{University of North Carolina - Chapel Hill, NC} 
     	Doctor of Philosophy: \textbf{Statistics and Operations Research}%
     	\mydate{Aug 2020 - May 2025}%
-    	\begin{p_item2}%
+    	\begin{pitemtwo}%
             \item Funded through NSF-funded grant to add research to theory and application of networks
-    	\end{p_item2}
+    	\end{pitemtwo}
         
     	\mysubheading{California Polytechnic State University - San Luis Obispo, CA}
     	Bachelor of Science: \textbf{Statistics} \mydate{Sep 2016 - Mar 2020}
-    	\begin{p_item2}
+    	\begin{pitemtwo}
     		\item 3.99 GPA, Summa Cum Laude, Academic Excellence Award
     		\item Founder and Secretary of the Actuarial Society Club
     		\item Member of Mu Sigma Rho, the US National Statistics Honors Society
-    	\end{p_item2}
+    	\end{pitemtwo}
      }
     	
 	
@@ -231,7 +231,7 @@
     %
     \mysubheading{University of North Carolina - Chapel Hill, NC}
     Improving the robustness and privacy of neural networks under Dr.\hspace{1pt}Yao Li \mydate{\phantom{1pt}}
-    \begin{p_item2}
+    \begin{pitemtwo}
 
         \item FedDecay: Adapting to Data Heterogeneity in Federated Learning With Gradient Decay, Joseph Lavond, Minhao Cheng, Yao Li, \textit{Under Review}
         \iftoggle{notes}{
@@ -257,7 +257,7 @@
             } 
         \smallskip
         }
-    \end{p_item2}
+    \end{pitemtwo}
     
     % 
     
@@ -266,18 +266,18 @@
     \myheading{Skills}
     
     \mysubheading{Coursework}
-    \begin{p_item2}
+    \begin{pitemtwo}
         \item Machine Learning: Gradient Boosting\iftoggle{notes}{ \textcolor{blue}{(Penalize mistakes heavier for later models)}}, Bagging\iftoggle{notes}{ \textcolor{blue}{(Bootstrap aggregation)}}, Bootstrapping, and Regularization\iftoggle{notes}{ \textcolor{blue}{(Penalize against large or unwanted solutions)}}
         \item Deep Learning: Semi and Self-Supervised\iftoggle{notes}{ \textcolor{blue}{(Partially and Psuedo-labeled)}}, and Transfer Learning for NLP and Computer Vision
-    \end{p_item2}
+    \end{pitemtwo}
     
     \mysubheading{Programming Languages}
-    \begin{p_item2}
+    \begin{pitemtwo}
         \item SQL (Snowflake, HUE, Microsoft Access) 
         \item Python (PyTorch, SciKit-Learn, PySpark, Pandas, NumPy, Matplotlib) 
         \item R (caret, tidyverse, ggplot2, dplyr, purr, stringr, shiny)
         \item Other: SAS, Microsoft Excel
-    \end{p_item2}
+    \end{pitemtwo}
     
     \textsc{Misc.} Git (GitHub, Bitbucket), Linux (Cluster Computing), Vim, Project Jupyter, Kubeflow
     
