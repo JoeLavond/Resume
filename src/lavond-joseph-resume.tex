@@ -1,287 +1,212 @@
-\documentclass[10pt]{article}
-\usepackage{xcolor}
-\usepackage{hyperref}
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
 
-% display speaking points
-\usepackage{etoolbox}
-\newtoggle{notes}
-\toggletrue{notes}
-\togglefalse{notes}
+\documentclass[letterpaper,11pt]{article}
 
-\newtoggle{notnotes}
-\toggletrue{notnotes}
-\iftoggle{notes}{
-    \togglefalse{notnotes}
-}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
 
-\newcommand\mpfact{.80}
-\newcommand\mpfactadj{.82}
 
-\usepackage[T1]{fontenc}
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
 
-\usepackage[margin=.5in]{geometry}
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
 
-\pagenumbering{gobble}
-\usepackage{ragged2e}
-\justifying
 
-\usepackage{hyperref}
-\hypersetup{colorlinks=true}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
 \urlstyle{same}
 
-\usepackage{multirow}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
 
-% Lists
-\usepackage{enumitem}
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-\newenvironment{pitem}{
-\begin{itemize}[leftmargin=30pt]
-    \vspace{-.2cm}
-    \setlength{\itemsep}{1pt}
-    \setlength{\parskip}{0pt}
-    \setlength{\parsep}{0pt}
-}{\end{itemize}}
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
 
-% Underlines
-\usepackage{calc}
-\newlength{\remaining}
-\newcommand{\titleline}[1]{%
-	\setlength{\remaining}{\linewidth-\widthof{\textsc{#1}}}
-	\noindent\underline{\textsc{#1}\hspace*{\remaining}}\par
-} 
-
-\newcommand{\myheading}[1]{%
-    \titleline{\Large{\textbf{#1}}}
-    
-    \smallskip
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
 }
 
-\newcommand\mysubheading[1]{%
-    \begin{minipage}{\mpfact\textwidth}
-        \titleline{#1}
-    \end{minipage}
-   
-    \smallskip
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand\mydate[1]{%
-    \hfill\emph{\small{#1}}
+\newcommand{\resumeMultiSubheading}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-7pt}
 }
 
-\newenvironment{pitemtwo}{
-    \begin{minipage}{\mpfactadj\textwidth}\vspace{.3cm}\begin{pitem}
-}{
-    \end{pitem}\end{minipage}\medskip
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{document}
-\small
-	
-	% Title 2 
-    \iftoggle{notnotes}{%
-        \begin{table}[t]
-            \centering
-            \begin{tabular}{c|l}
-                \multirow{4}{*}{\huge{\textbf{JOSEPH LAVOND}}} & Phone: 209-269-7175\\
-                & Email: joelavond@gmail.com \\
-                & GitHub: \href{https://github.com/JoeLavond}{github.com/JoeLavond} \\
-            & LinkedIn: \href{https://linkedin.com/in/josephlavond1997}{linkedin.com/in/josephlavond1997} 
-            \end{tabular}
-            \vspace{-.3cm}
-        \end{table}
-    	
-    }
 
-    %
-    \iftoggle{notes}{%
-        \myheading{Summary}
-        \textcolor{blue}{
-        \vspace{-\baselineskip} \\
-            Common Questions:
-            \begin{pitem}%
-                \item About me: School, advisor, and research, then consulting and internships, finally automotive
-                \item Goals: Set industry standards for autonomy, improving access and safety of transportation
-                \item Strengths: Background, presentation, work great on a team or as an individual
-                \item Weaknesses: Time management and leadership skills
-            \end{pitem} 
-            My Questions:
-            \begin{pitem}
-                \item How do you cope with winter? What is your favorite thing to do in February?
-                \item What do you see as the next big step for Zero-Zero-Zero?
-                \item Current trend for office vs. home work?
-            \end{pitem}
-        }   
-        
-        \smallskip
-    }
-    
-    \myheading{Internships}
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
 
-    %
-    \mysubheading{Cisco - San Jose, CA}
-    Ph.D.\ Intern \mydate{June 2023 - Aug 2023}
-    \begin{pitemtwo}
-        \item Lead research efforts to improve the diversity of samples produced by generative artificial intelligence
-        \item Evaluated changes to prevent the occurrence of mode collapse in Generative Adversarial Networks
-        \item Researching more efficient ways to train generative models with Differential Privacy
-    \end{pitemtwo}
-    
-    %
-    \mysubheading{Elevance Health, Inc. (Formerly Anthem) - Indianapolis, IN}
-    Graduate Info Technology Intern \mydate{June 2022 - Aug 2022}
-    \begin{pitemtwo}
-        \item Implemented custom PyTorch semi-supervised Bayesian anomaly detection approach on Amazon Web Service (AWS) to identify up-coded Evaluation \& Management (E/M) claims
-        \iftoggle{notes}{
-        
-            \smallskip \textcolor{blue}{
-                Situation: Very few known examples of fraud \\
-                Task: DS wanted to explore Bayesian methods to tackle use case \\
-                Act: Implemented Bayesian model with semi-supervised extension and deep learning solution that approximates complex Bayesian methods \\
-                Result: Presentations technical and non-technical with compliments \\
-                Reflect: Implement stochastic weight averaging in-house 
-            } 
-        \smallskip
-        }
-        
-        \item Received Impact award for end-of-summer technical presentation to senior management
-        \item Participated in Agile Scrum model development process using Jira of a Fortune-30 company
-        \item Created modeling data set pipeline for 60M row database using PySpark SQL in Jupyter on Kubeflow
-        \iftoggle{notes}{
-        
-            \smallskip \textcolor{blue}{
-                Situation: Bayesian methods are often computationally costly. However, this model has an exact solution \\
-                Task: Compute and store the model solution for fast training and real time prediction \\
-                Act: Use PySpark SQL to use Hadoop MapReduce operations to compute solution and store on s3 in AWS \\
-                Result: Faster run time than in-house distributed algorithms with minimal performance loss and interpretable solution 
-            } 
-        \smallskip
-        }
-        
-    \end{pitemtwo}
-    
-    %
-    \mysubheading{Blue Cross Blue Shield of Arizona - Phoenix, AZ}
-    Actuarial Services Intern \mydate{Apr 2020 - Aug 2020}
-    \begin{pitemtwo}
-        \item Spearheaded the company-wide projection of membership for all lines of business
-        \iftoggle{notes}{
-        
-            \smallskip \textcolor{blue}{
-                Situation: Credentialed actuary left already short staffed team early into my internship \\
-                Task: Take over their report projecting membership which most finance and actuarial teams build upon \\
-                Act: Learned VBA to automate notoriously manual report \\
-                Result: Teams now able to complete downstream reports earlier in the month \\
-                Reflect: Rewrite report to be readable and understandable
-            } 
-        \smallskip
-        }
-        
-        \item Learned VBA to automate monthly updates to company forecasts within Microsoft Excel 
-        \item Automated data collection using process flows in SAS and SQL queries in Microsoft Access
-    \end{pitemtwo}
+\begin{center}
+    \textbf{\Huge \scshape Joe Lavond} \\ \vspace{1pt}
+    \small 209-269-7175 $|$ \href{mailto:joelavond@gmail.com}{joelavond@gmail.com} $|$ 
+    \href{https://linkedin.com/in/joelavond}{linkedin.com/in/joelavond} $|$
+    \href{https://github.com/JoeLavond}{github.com/JoeLavond}
+\end{center}
 
-        %
-    \mysubheading{California Polytechnic State University - San Luis Obispo, CA}
-    Frost Summer Research Program 2019 \mydate{May 2019 - Sep 2019}
-    \begin{pitemtwo}
-        \item Manipulated the Surveillance, Epidemiology, and End Results (SEER) database, containing over 20 million cancer cases within the United States, using SAS
-        \item Analyzed SEER data with KM\iftoggle{notes}{ \textcolor{blue}{(Empirical survival curve)}}{} and COX\iftoggle{notes}{ \textcolor{blue}{(Proportional hazards = instantaneous failure rate)}}{} survival models using R
-        \iftoggle{notes}{
-        
-            \smallskip \textcolor{blue}{
-                Situation: Large database on many historical cancers cases in US \\
-                Task: Present sensitive information in an informative manner \\
-                Act: Coordinate use of multiple statistical tools to process and model large data \\
-                Result: Interactive interface to visualize prognosis and impact of various treatment options \\
-                Reflect: More complex models needed to give accurate estimates
-            } 
-        \smallskip
-        }
-        
-        \item Constructed an interactive R Shiny app for cancer patient use, taking demographic and diagnosis information as inputs, and providing a prognosis
-    \end{pitemtwo}
-    
-    
-    
-    %
-    \iftoggle{notnotes}{
-        \myheading{Education}
-    	
-    	\mysubheading{University of North Carolina - Chapel Hill, NC} 
-    	Doctor of Philosophy: \textbf{Statistics and Operations Research}%
-    	\mydate{Aug 2020 - May 2025}%
-    	\begin{pitemtwo}%
-            \item Funded through NSF-funded grant to add research to theory and application of networks
-    	\end{pitemtwo}
-        
-    	\mysubheading{California Polytechnic State University - San Luis Obispo, CA}
-    	Bachelor of Science: \textbf{Statistics} \mydate{Sep 2016 - Mar 2020}
-    	\begin{pitemtwo}
-    		\item 3.99 GPA, Summa Cum Laude, Academic Excellence Award
-    		\item Founder and Secretary of the Actuarial Society Club
-    		\item Member of Mu Sigma Rho, the US National Statistics Honors Society
-    	\end{pitemtwo}
-     }
-    	
-	
-    % 
-    \myheading{Publications}
 
-    %
-    \mysubheading{University of North Carolina - Chapel Hill, NC}
-    Improving the robustness and privacy of neural networks under Dr.\hspace{1pt}Yao Li \mydate{\phantom{1pt}}
-    \begin{pitemtwo}
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeMultiSubheading
+      {University of North Carolina}{Chapel Hill, NC}
+      {Doctorate of Philosophy in Statistics and Operations Research}{Aug. 2020 -- May 2025}{Master of Science in Statistics and Data Science}{May 2024}
+    \resumeSubheading{California Polytechnic State University}{San Luis Obispo}{Bachelor of Science in Statistics}{Sep. 2016 -- Mar. 2020}
+  \resumeSubHeadingListEnd
 
-        \item FedDecay: Adapting to Data Heterogeneity in Federated Learning With Gradient Decay, Joseph Lavond, Minhao Cheng, Yao Li, \textit{Under Review}
-        \iftoggle{notes}{
-        
-            \smallskip \textcolor{blue}{
-                Situation: How to use shared information from all users to create the best personalized models for each \\
-                Task: Create a shared model that is a good initialization for user fine tuning \\
-                Act: Specific modifications to meta learning algorithms to make viable to federated learning by also having good accuracy for users without data \\
-                Result: Implementation that creates improved accuracy on new users with or without data
-            } 
-        \smallskip
-        }
-    
-        \item Trusted Aggregation (TAG): Backdoor Defense in Federated Learning, Joseph Lavond, Minhao Cheng, Yao Li, \textit{In NeurIPS Workshop on Federated Learning: Recent Advances and New Challenges, 2022}
-        \iftoggle{notes}{
-        
-            \smallskip \textcolor{blue}{
-                Situation: Users models are aggregated to create a shared model while preserving data privacy, but a single malicious user can send an update that can compromise the shared model \\
-                Task: Determine how to identify and exclude malicious updates \\
-                Act: With small data set can understand the behavior of non-malicious users and exclude those with different behavior \\
-                Result: Can filter out malicious users even when up to 40\% of all suggested updates are harmful \\
-                Reflect: Need to extend to adaptive attack, when malicious users know defense
-            } 
-        \smallskip
-        }
-    \end{pitemtwo}
-    
-    % 
-    
-    
-    %
-    \myheading{Skills}
-    
-    \mysubheading{Coursework}
-    \begin{pitemtwo}
-        \item Machine Learning: Gradient Boosting\iftoggle{notes}{ \textcolor{blue}{(Penalize mistakes heavier for later models)}}, Bagging\iftoggle{notes}{ \textcolor{blue}{(Bootstrap aggregation)}}, Bootstrapping, and Regularization\iftoggle{notes}{ \textcolor{blue}{(Penalize against large or unwanted solutions)}}
-        \item Deep Learning: Semi and Self-Supervised\iftoggle{notes}{ \textcolor{blue}{(Partially and Psuedo-labeled)}}, and Transfer Learning for NLP and Computer Vision
-    \end{pitemtwo}
-    
-    \mysubheading{Programming Languages}
-    \begin{pitemtwo}
-        \item SQL (Snowflake, HUE, Microsoft Access) 
-        \item Python (PyTorch, SciKit-Learn, PySpark, Pandas, NumPy, Matplotlib) 
-        \item R (caret, tidyverse, ggplot2, dplyr, purr, stringr, shiny)
-        \item Other: SAS, Microsoft Excel
-    \end{pitemtwo}
-    
-    \textsc{Misc.} Git (GitHub, Bitbucket), Linux (Cluster Computing), Vim, Project Jupyter, Kubeflow
-    
-    
-    
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+        {Graduate Data Science Intern}{June 2024 -- Aug. 2024}
+        {Red Ventures}{Fort Mills, SC}
+        \resumeItemListStart
+            \resumeItem{Implemented offline model-based Q-Learning, a reinforcement learning algorithm, demonstrating a typical 5\% increase in revenue per session, translating to an estimated \$5M in additional business revenue}
+            \resumeItem{Developed and integrated over 6K lines of production code into a simulation environment focused on Markov Decision Processes for website traffic}
+            \resumeItem{Established a streamlined pipeline leveraging historical production data to generate simulations, resulting in a substantial increase in both the quantity and complexity of simulations, leading to robust solutions}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Ph.D. Intern}{June 2023 -- Aug. 2023}
+      {Cisco}{San Jose, CA}
+      \resumeItemListStart
+        \resumeItem{Evaluated changes to prevent the occurrence of mode collapse in Generative Adversarial Networks, where samples are not diverse and did not learn to cover the training distribution}
+        \resumeItem{Developed a more efficient way to train generative models with differential privacy at scale, enabling statistical guarantees for the protection of private training data}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Graduate Info Technology Intern}{June 2022 -- Aug. 2022}
+      {Elevance Health, Inc. (Formerly Anthem)}{Indianapolis, IN}
+      \resumeItemListStart
+        \resumeItem{Implemented custom PyTorch semi-supervised Bayesian anomaly detection approach on Amazon Web Service (AWS) to identify exaggerated claims by providers for services offered}
+        \resumeItem{Received award for end-of-summer presentation to senior management}
+        \resumeItem{Created modeling data set pipeline for 60M row database using PySpark SQL in Jupyter on Kubeflow}
+      \resumeItemListEnd
+
+      \resumeSubheading
+        {Actuarial Services Intern}{Apr. 2020 -- Aug. 2020}
+        {Blue Cross Blue Shield}{Phoenix, AZ}
+        \resumeItemListStart
+            \resumeItem{Spearheaded the company-wide projection of membership for all lines of business}
+            \resumeItem{Learned VBA to automate monthly updates to company forecasts within Microsoft Excel as well as data collection using process flows in SAS and SQL queries in Microsoft Access}
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {Frost Summer Research Program}{May 2019 -- Sep. 2019}
+        {California Polytechnic State University}{San Luis Obispo, CA}
+        \resumeItemListStart
+            \resumeItem{Created an R Shiny app for cancer patient use, taking demographic and diagnosis information as input and providing estimated prognoses for various treatments based on KM and COX survival models.}
+            \resumeItem{Manipulated with SAS the SEER database of 20M cancer cases}
+        \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%
+%-----------PUBLICATIONS-----------
+\section{Publications}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{FedDecay: Adapting to Data Heterogeneity in Federated Learning With Gradient Decay}{, Joseph Lavond, Minhao Cheng, Yao Li, Under Review} \\
+     \textbf{Trusted Aggregation (TAG): Backdoor defense in Federated Learning}{, Joseph Lavond, Minhao Cheng, Yao Li, In NeurIPS Workshop on Federated Learning: Recent Advances and New Challenges, 2022} 
+    }}
+ \end{itemize}
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Technical}{: Languages \textit{(Python, R, SQL, SAS)}, Machine Learning \textit{(PyTorch, scikit-learn, Tensorflow, Keras, caret)}, Analysis \textit{(Pandas, NumPy, SciPy, Tidyverse)}, Visualization \textit{(Matplotlib, Seaborn, ggplot2)}, Other \textit{(Git, Linux)}} \\
+     \textbf{Soft}{: Communication \textit{(data storytelling, technical documentation)}, Adaptability \textit{(agile methodologies, quick learner, flexible in dynamic environments)}, Time Management \textit{(prioritization, multi-tasking)}, Teamwork \textit{(collaborative projects, cross-functional teams, leadership skills)}}  \\
+    }}
+ \end{itemize}
+
+% 
+%-------------------------------------------
 \end{document}
-    	
