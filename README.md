@@ -1,3 +1,3 @@
 <figure align="center">
-    <img src="out/page-1.png" width="100%" />
+    <img src="out/lavond-joseph-resume.png" width="100%"  alt=""/>
 </figure>
