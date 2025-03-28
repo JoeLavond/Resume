@@ -7,6 +7,8 @@
 
 \documentclass[letterpaper,11pt]{article}
 
+\usepackage{bibentry}
+
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -113,6 +115,8 @@
 
 
 \begin{document}
+\nobibliography{bibliography}
+\bibliographystyle{unsrt}
 
 %----------HEADING----------
 % \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
@@ -121,7 +125,7 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape Joe Lavond} \\ \vspace{1pt}
+    \textbf{\Huge \scshape Joseph Lavond} \\ \vspace{1pt}
     \small 209-269-7175 $|$ \href{mailto:joelavond@gmail.com}{joelavond@gmail.com} $|$ 
     \href{https://linkedin.com/in/joelavond}{linkedin.com/in/joelavond} $|$
     \href{https://github.com/JoeLavond}{github.com/JoeLavond}
@@ -191,14 +195,13 @@
 %
 %-----------PUBLICATIONS-----------
 \section{Publications}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{FedDecay: Adapting to Data Heterogeneity in Federated Learning With Gradient Decay}{, Joseph Lavond, Minhao Cheng, Yao Li, Under Review} \\
-     \textbf{Trusted Aggregation (TAG): Backdoor defense in Federated Learning}{, Joseph Lavond, Minhao Cheng, Yao Li, TMLR, 2022}
-    }}
- \end{itemize}
+    \resumeItemListStart
+        % \resumeItem{Joseph Lavond, Yuexin Cheng, Chudi Zhong, and Yao Li. Partition-Based Backdoor Detection and Purification from Poisoned Data. In progress.}
+        \resumeSubItem{Joseph Lavond, Minhao Cheng, and Yao Li. FedDecay: Adapting to Data Heterogeneity in Federated Learning with Gradient Decay. Under review.}
+        \resumeSubItem{\bibentry{tag}}
+    \resumeItemListEnd
+    
 
-%
 %-----------PROGRAMMING SKILLS-----------
 \section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
