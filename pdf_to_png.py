@@ -22,7 +22,7 @@ def get_args():
     parser.add_argument(
         "--file_name",
         type=str,
-        default="lavond-joseph-resume",
+        default="lavond-joseph-cv",  # specify with suffix resume or cv whether to convert my 1 or multipage resume
         help="Name of the file for conversion",
     )
 
@@ -52,12 +52,11 @@ def main(configs: argparse.Namespace) -> None:
 
     if len(images) == 0:
         raise ValueError(f"No images were converted from {in_path}")
-    if len(images) > 1:
-        raise ValueError(f"Multiple images were converted from {in_path}")
 
     # save the image
-    out_path = path / f"{configs.file_name}.png"
-    images[0].save(out_path, "PNG")
+    for page_num, page in enumerate(images):
+        out_path = path / f"{configs.file_name}-page{page_num + 1}.png"
+        page.save(out_path, "PNG")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,7 @@
 ### LaTeX template
-*.idea
+# do not publically track any cover letters
 **/*cover*
+*.idea
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
