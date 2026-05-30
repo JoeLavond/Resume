@@ -1,0 +1,355 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{bibentry}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeMultiSubheading}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\nobibliography{bibliography}
+\bibliographystyle{unsrt}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Joseph Lavond} \\ \vspace{1pt}
+    \small 209-269-7175 $|$ \href{mailto:joelavond@gmail.com}{joelavond@gmail.com} $|$ 
+    \href{https://linkedin.com/in/joelavond}{linkedin.com/in/joelavond} $|$
+    \href{https://github.com/JoeLavond}{github.com/JoeLavond}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeMultiSubheading{University of North Carolina}{Chapel Hill, NC}%
+      {Ph.D. Statistics and Operations Research}{Aug. 2020 -- May 2025}%
+      {M.S. Statistics and Data Science}{Aug. 2020 -- May 2024}
+    \resumeSubheading{California Polytechnic State University}{San Luis Obispo}%
+      {B.S. Statistics}{Sep. 2016 -- Mar. 2020}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Industry}
+  \resumeSubHeadingListStart
+  
+\resumeSubheading
+    {Data Scientist}{June 2025 -- Present}
+    {Red Ventures}{Fort Mills, SC}
+    \resumeItemListStart
+    \resumeItem{
+        Built and productionized ReplayOPE, an offline policy evaluation framework for contextual bandits used to evaluate decision policies, generate automated recommendations, and support experimentation for production agents
+    }
+    \resumeItem{
+        Owned the end-to-end ML product lifecycle for ReplayOPE, including system architecture, Databricks deployment, CI/CD (GitHub Actions, Terraform), and development of a FastAPI-based service layer enabling programmatic access for LLM-driven workflows and future agent skill integration
+    }
+    \resumeItem{
+        Developed advanced evaluation capabilities including combinatorially purged cross-validation, warm starts, streaming data processing, concurrent experiment execution, and statistically rigorous comparison of policies
+    }
+    \resumeItem{
+        Made major contributions to offline reinforcement learning training and serving systems, including fixing a 3+ year missing-values inference bug, implementing recency-based sample weighting, and modularizing data preprocessing pipelines for robustness and extensibility
+    }
+    \resumeItem{
+        Integrated and productionized advanced ML methods including CatBoost and ordinal encoding for LightGBM, improving model performance and expanding support for high-cardinality feature spaces
+    }
+    \resumeItem{
+        Led cross-functional adoption of ReplayOPE through onboarding, documentation, and presentations, and built automated, searchable documentation pipelines (MkDocs, GitHub Pages, Confluence sync) to improve discoverability and reduce manual maintenance
+    }
+    \resumeItem{
+        Contributed to adjacent platform and innovation work including Databricks dashboards, clustering and segmentation analysis, and LLM-based data enrichment pipelines
+    }
+    \resumeItemListEnd
+
+    \resumeSubheading
+        {Graduate Data Science Intern}{June 2024 -- Aug. 2024}
+        {Red Ventures}{Fort Mills, SC}
+        \resumeItemListStart
+            \resumeItem{Implemented offline model-based Q-Learning, a reinforcement learning algorithm, demonstrating a typical 5\% increase in revenue per session, translating to an estimated \$5M in additional business revenue}
+            \resumeItem{Developed and integrated over 6K lines of production code into a simulation environment focused on Markov Decision Processes for website traffic}
+            \resumeItem{Established a streamlined pipeline leveraging historical production data to generate simulations, resulting in a substantial increase in both the quantity and complexity of simulations, leading to robust solutions}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Ph.D. Intern}{June 2023 -- Aug. 2023}
+      {Cisco}{San Jose, CA}
+      \resumeItemListStart
+        \resumeItem{Developed a more efficient way to train generative models with differential privacy at scale, enabling statistical guarantees for the protection of private training data}
+        \resumeItem{Evaluated changes to prevent the occurrence of mode collapse in Generative Adversarial Networks, where samples are not diverse and did not learn to cover the training distribution}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Graduate Info Technology Intern}{June 2022 -- Aug. 2022}
+      {Elevance Health, Inc. (Formerly Anthem)}{Indianapolis, IN}
+      \resumeItemListStart
+        \resumeItem{Implemented custom PyTorch semi-supervised Bayesian anomaly detection approach on Amazon Web Service (AWS) to identify exaggerated claims by providers for services offered}
+        \resumeItem{Created modeling data set pipeline for 60M row database using PySpark SQL in Jupyter on Kubeflow}
+        \resumeItem{Received award for end-of-summer presentation to senior management}
+        \resumeItem{Participated in Agile Scrum model development process using Jira for a Fortune-30 company}
+      \resumeItemListEnd
+
+      \resumeSubheading
+        {Actuarial Services Intern}{Apr. 2020 -- Aug. 2020}
+        {Blue Cross Blue Shield}{Phoenix, AZ}
+        \resumeItemListStart
+            \resumeItem{Took over the job responsibilities of an Actuary who left the team early into the internship, which included providing the organization with the projected membership for all lines of business}
+            \resumeItem{Learned VBA to automate monthly updates to company forecasts within Microsoft Excel as well as data collection using process flows in SAS and SQL queries in Microsoft Access}
+        \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+  
+\section{Academic}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+        {Graduate Teaching Fellow}{Spring 2022 \& Fall 2024}
+        {University of North Carolina}{Chapel Hill, NC}
+        \resumeItemListStart
+            \resumeItem{
+                Trusted with teaching multiple semesters of an introduction to statistics and data science to over 100 undergraduates
+            }
+            \resumeItem{
+                Created a research project to learn skills related to storytelling with data for students to develop the ability to ingest and communicate answers from data
+            }
+            \resumeItem{
+                Created a research project on famous statistical biases for students to learn and present problematic ways of thinking, historical examples, and how to correctly reason from such problems
+            }
+            % \resumeItem{
+            %     Created over 40 lectures from the OpenIntro Statistics textbook to instill an understanding and appreciation for data, models, and inference
+            % }
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {NSF-Funded Research Training Group}{Aug 2022 -- May 2025}
+        {University of North Carolina}{Chapel Hill, NC}
+        \resumeItemListStart
+            \resumeItem{Funding through a \$2M grant to add research to theory and application of networks}
+            \resumeItem{Actively participate in seminars and intensive courses to learn from leaders in network research}
+        \resumeItemListEnd
+        
+    % \resumeSubheading
+    %     {Graduate Teaching Assistant}{Aug 2020 -- May 2021}
+    %     {University of North Carolina}{Chapel Hill, NC}
+    %     \resumeItemListStart
+    %         \resumeItem{
+    %             Lab instructor for teaching the foundations of statistics and data science in python covering data manipulation, visualization, simulation, and modeling
+    %         }
+    %         \resumeItem{
+    %             Teaching assistant for introduction to optimization covering linear, integer, non-linear, and dynamic programming, classical optimization problems, and network theory
+    %         }
+    %     \resumeItemListEnd
+        
+  \resumeSubHeadingListEnd
+
+
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+        {Statistical Consultant}{Aug 2022 -- Dec 2023}
+        {University of North Carolina}{Chapel Hill, NC}
+        \resumeItemListStart
+            \resumeItem{
+                Used R to analyze longitudinal behavioral data, uncovering early behavioral markers across autism risk groups to support early diagnosis and intervention strategies
+            }
+            \resumeItem{
+                Used R to model medical contract turnaround times, identifying key drivers of delays and delivering predictive insights to inform process improvements
+            }
+        \resumeItemListEnd
+        
+    \resumeSubheading
+        {Fatal Force}{Aug 2020 - May 2021}
+        {University of North Carolina}{Chapel Hill, NC}
+        \resumeItemListStart
+            \resumeItem{
+                Engineered features from diverse datasets, including FBI crime reports and Census demographic data, standardizing variables and creating regional dummy variables to account for geographic heterogeneity
+            }                
+            \resumeItem{
+                Developed and evaluated models using R to predict police shooting fatalities, improving test RMSE by 3 percent, and identifying key predictors like officer employment and population demographics across regions            
+            }
+            \resumeItem{
+                Validated model robustness by comparing results across multiple statistical frameworks (Poisson link and variance-stabilizing transformations), confirming consistent directionality and magnitude of key coefficients
+            }
+            
+        \resumeItemListEnd
+        
+        
+    \resumeSubheading
+        {Statistical Consultant}{Sep 2019 -- Jul 2020}
+        {California Polytechnic State University}{San Luis Obispo, CA}
+        \resumeItemListStart
+            \resumeItem{Provided SAS mixed modeling analyses and coauthored NIH funded infant feeding study on early life factors and childhood obesity as part of \$2 million grant}
+            \resumeItem{Provided statistical support regarding generalized linear models for the theses of several graduate students}
+        \resumeItemListEnd
+        
+    \resumeSubheading
+        {Frost Summer Research Program}{May 2019 -- Sep. 2019}
+        {California Polytechnic State University}{San Luis Obispo, CA}
+        \resumeItemListStart
+            \resumeItem{Created an R Shiny app for cancer patient use, taking demographic and diagnosis information as input and providing estimated prognoses for various treatments based on KM and COX survival models.}
+            \resumeItem{Manipulated with SAS the SEER database of 20M cancer cases}
+        \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%
+%-----------PUBLICATIONS-----------
+\section{Publications}
+    \resumeItemListStart
+        \resumeSubItem{\bibentry{dissertation}}
+        \resumeSubItem{\bibentry{decay}}
+        \resumeSubItem{\bibentry{tag}}
+        % \resumeSubItem{\bibentry{feeding}}
+    \resumeItemListEnd
+    
+% \section{Presentations}
+%     \resumeItemListStart
+%         \resumeSubItem{\bibentry{defense}}
+%         \resumeSubItem{\bibentry{privacy-lecture}}
+%         \resumeSubItem{\bibentry{tag-poster}}
+%     \resumeItemListEnd
+    
+%-----------PROGRAMMING SKILLS-----------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{
+    \item{
+        \textbf{Machine Learning \& Statistics:} Contextual Bandits, Offline Policy Evaluation (OPE), Reinforcement Learning, Bayesian Inference, Ensemble Methods, LightGBM, CatBoost, PyTorch, TensorFlow, scikit-learn
+    }
+    \item{
+        \textbf{Experimentation \& Causal Inference:} A/B Testing, Statistical Testing, Cross-Validation, Policy Evaluation, Uplift Modeling (conceptual), Experiment Design
+    }
+    \item{
+        \textbf{Programming \& Data:} Python, SQL, R, Pandas, NumPy, PySpark, SciPy, Tidyverse
+    }
+    \item{
+        \textbf{ML Systems \& Infrastructure:} FastAPI, Databricks (DBRX), CI/CD (GitHub Actions), Terraform, Model Deployment, API Design, Distributed Workloads
+    }
+    \item{
+        \textbf{Data Engineering \& Analytics:} Feature Engineering, Data Pipelines, Data Quality \& Validation, Clustering, Segmentation, Dashboarding
+    }
+    \item{
+        \textbf{Visualization:} Matplotlib, Seaborn, ggplot2
+    }
+    \item{
+        \textbf{Tools:} Git, Linux
+    }
+}
+\end{itemize}
+
+% 
+%-------------------------------------------
+\end{document}
