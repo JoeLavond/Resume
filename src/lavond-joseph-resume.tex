@@ -147,57 +147,57 @@
 \section{Experience}
   \resumeSubHeadingListStart
 
-    \resumeSubheading
-        {Data Scientist}{June 2025 -- Present}
-        {Red Ventures}{Fort Mills, SC}
-        \resumeItemListStart
-        \resumeItem{
-            Built and productionized ReplayOPE, an offline policy evaluation platform for contextual bandits enabling policy evaluation, automated recommendations, and experimentation for production decision systems
-        }
-        \resumeItem{
-            Owned the end-to-end ML product lifecycle, including system architecture, Databricks deployment, CI/CD (GitHub Actions, Terraform), and development of a FastAPI-based service layer supporting programmatic access for LLM-driven workflows and future agent capabilities
-        }
-        \resumeItem{
-            Developed advanced experimentation methodology including combinatorially purged cross-validation, warm starts, streaming evaluation, and statistically rigorous policy comparison
-        }
-        \resumeItem{
-            Improved core offline RL infrastructure by fixing a 3+ year missing-values inference bug, implementing recency-based sample weighting, and modularizing data pipelines for robustness and scalability
-        }
-        \resumeItem{
-            Productionized advanced ML methods including CatBoost and LightGBM enhancements (ordinal encoding), enabling improved performance on high-cardinality decisioning problems
-        }
-        \resumeItem{
-            Drove cross-team adoption through onboarding, documentation, and automated publishing of searchable docs (MkDocs, GitHub Pages, Confluence), while contributing to LLM enrichment pipelines and internal analytics tooling
-        }
-        \resumeItemListEnd
+  \resumeSubheading
+    {Data Scientist}{June 2025 -- Present}
+    {Red Ventures}{Fort Mill, SC}
+    \resumeItemListStart
+      \resumeItem{
+          Built ReplayOPE, an offline policy evaluation platform for contextual bandits that surfaced stronger agent setups in 75\%+ of experiments and generated automated recommendations for production decision systems
+      }
+      \resumeItem{
+          Evolved ReplayOPE from research POC to internal ML product with FastAPI services, Databricks Apps, analyst UI, MCP integration, usage tracking, and CI/CD via GitHub Actions and Terraform
+      }
+      \resumeItem{
+          Developed advanced evaluation methods including purged cross-validation, warm starts, delayed rewards, streaming execution, concurrent runs, eligibility checks, and rigorous policy comparison
+      }
+      \resumeItem{
+          Improved DAPI offline RL infrastructure by fixing a 3+ year missing-values inference bug and productionizing CatBoost, ordinal LightGBM, and recency-based sample weighting / historical importance, with several agents observing +10 percentage-point revenue lift following adoption
+      }
+      \resumeItem{
+          Drove adoption through analyst onboarding, product demos, searchable docs, and rollout of a vertical-wide skills marketplace for approved skill distribution
+      }
+    \resumeItemListEnd
 
-    \resumeSubheading
-        {Graduate Data Science Intern}{June 2024 -- Aug. 2024}
-        {Red Ventures}{Fort Mills, SC}
-        \resumeItemListStart
-            \resumeItem{Implemented offline model-based Q-Learning, a reinforcement learning algorithm, demonstrating a typical 5\% increase in revenue per session, translating to an estimated \$5M in additional business revenue}
-            \resumeItem{Developed and integrated a simulation environment focused on Markov Decision Processes for website traffic}
-            \resumeItem{Established a streamlined pipeline leveraging historical production data to generate simulations, resulting in a substantial increase in both the quantity and complexity of simulations, leading to robust solutions}
-        \resumeItemListEnd
+  \resumeSubheading
+    {Graduate Data Science Intern}{June 2024 -- Aug. 2024}
+    {Red Ventures}{Fort Mill, SC}
+    \resumeItemListStart
+      \resumeItem{
+          Implemented offline model-based Q-learning for website decisioning, demonstrating a typical 5\% revenue-per-session lift and estimated \$5M annual revenue opportunity
+      }
+      \resumeItem{
+          Built a historical-production-data simulation pipeline for Markov Decision Process experiments, increasing simulation quantity, complexity, and robustness
+      }
+    \resumeItemListEnd
 
-    \resumeSubheading
+  \resumeSubheading
       {Graduate Research Intern}{June 2023 -- Aug. 2023}
       {Cisco}{San Jose, CA}
       \resumeItemListStart
-        \resumeItem{Evaluated changes to prevent the occurrence of mode collapse in Generative Adversarial Networks, where samples are not diverse and did not learn to cover the training distribution}
-        \resumeItem{Developed a more efficient way to train generative models with differential privacy at scale, enabling statistical guarantees for the protection of private training data}
-    \resumeItemListEnd
-
-    \resumeSubheading
-      {Graduate Info Technology Intern}{June 2022 -- Aug. 2022}
-      {Elevance Health, Inc. (Formerly Anthem)}{Indianapolis, IN}
-      \resumeItemListStart
-        \resumeItem{Implemented custom PyTorch semi-supervised Bayesian anomaly detection approach on Amazon Web Service (AWS) to identify exaggerated claims by providers for services offered}
-        % \resumeItem{Received award for end-of-summer presentation to senior management}
-        \resumeItem{Created modeling data set pipeline for 60M row database using PySpark SQL in Jupyter on Kubeflow}
+          \resumeItem{
+              Developed scalable differentially private generative-model training methods and evaluated GAN mode-collapse mitigation techniques
+          }
       \resumeItemListEnd
 
-    % \resumeSubheading
+  \resumeSubheading
+    {Graduate Info Technology Intern}{June 2022 -- Aug. 2022}
+    {Elevance Health}{Indianapolis, IN}
+    \resumeItemListStart
+        \resumeItem{
+            Built a PyTorch semi-supervised Bayesian anomaly-detection model on AWS and created a PySpark SQL pipeline for 60M-row claims data
+        }
+    \resumeItemListEnd    % \resumeSubheading
+
     %   {Actuarial Services Intern}{Apr. 2020 -- Aug. 2020}
     %   {Blue Cross Blue Shield}{Phoenix, AZ}
     %   \resumeItemListStart
@@ -221,31 +221,28 @@
 \section{Publications}
     \resumeItemListStart
         % \resumeSubItem{\bibentry{partition}}
-        \resumeSubItem{\bibentry{dissertation}}
         \resumeSubItem{\bibentry{decay}}
+        % \resumeSubItem{\bibentry{dissertation}}
         \resumeSubItem{\bibentry{tag}}
     \resumeItemListEnd
     
 
 %-----------PROGRAMMING SKILLS-----------
 \section{Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=0.1em]
 \small{
     \item{
-        \textbf{Machine Learning \& Decisioning:} Contextual Bandits, Offline Policy Evaluation (OPE), Reinforcement Learning, LightGBM, CatBoost, Ensemble Methods, Bayesian Inference
+        \textbf{ML \& Decision Systems:} Contextual Bandits, Offline Policy Evaluation (OPE), Reinforcement Learning, LightGBM, CatBoost, Sample Weighting, Bayesian Inference
     }
     \item{
-        \textbf{Programming \& Data:} Python, SQL, Pandas, NumPy, PySpark, SciPy
+        \textbf{Production ML \& AI Infrastructure:} FastAPI, Databricks Apps/Jobs, GitHub Actions, Terraform, CI/CD, Model Deployment, MCP, LLM Workflows, Experimentation Platforms
     }
     \item{
-        \textbf{ML Systems \& Infrastructure:} FastAPI, Databricks, CI/CD (GitHub Actions), Terraform, Model Deployment, Experimentation Platforms
-    }
-    \item{
-        \textbf{Data Engineering \& Analytics:} Feature Engineering, Data Pipelines, Statistical Testing, A/B Testing, Clustering, Segmentation
+        \textbf{Programming, Data \& Experimentation:} Python, SQL, Pandas, NumPy, PySpark, SciPy, Feature Engineering, Data Pipelines, Statistical Testing, A/B Testing
     }
 }
 \end{itemize}
 
-% 
+
 %-------------------------------------------
 \end{document}
