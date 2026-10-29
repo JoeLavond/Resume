@@ -152,19 +152,19 @@
     {Red Ventures}{Fort Mill, SC}
     \resumeItemListStart
       \resumeItem{
-          Built ReplayOPE, an offline policy evaluation platform for contextual bandits that surfaced stronger agent setups in 75\%+ of experiments and generated automated recommendations for production decision systems
+          Authored the LLM cost roadmap for Kamino, RV's AI agent platform (15 business units, 120+ agents), and delivered its measurement and prompt-caching phases, cutting cost per model call $\sim$30\% ($\sim$\$65K/yr)
       }
       \resumeItem{
-          Evolved ReplayOPE from research POC to internal ML product with FastAPI services, Databricks Apps, analyst UI, MCP integration, usage tracking, and CI/CD via GitHub Actions and Terraform
+          Built trace monitoring that prioritizes agent conversations by implicit signals (trace errors) and user feedback, classifies failures, and generates A/B-validated eval cases and recommendations; live in 3 business units
       }
       \resumeItem{
-          Developed advanced evaluation methods including purged cross-validation, warm starts, delayed rewards, streaming execution, concurrent runs, eligibility checks, and rigorous policy comparison
+          Built ReplayOPE, an offline policy evaluation platform for contextual bandits; challengers beat production baselines in 67\% of 54 analyses (3.2\% median lift), with recommendations traced to production changes across 18 agents
       }
       \resumeItem{
-          Improved DAPI offline RL infrastructure by fixing a 3+ year missing-values inference bug and productionizing CatBoost, ordinal LightGBM, and recency-based sample weighting / historical importance, with several agents observing +10 percentage-point revenue lift following adoption
+          Fixed a 3-year missing-values bug and a 2-year policy-importance bug in offline RL training, and productionized CatBoost, ordinal encoding, and recency-based sample weighting (Replay-estimated lifts up to 10\%)
       }
       \resumeItem{
-          Drove adoption through analyst onboarding, product demos, searchable docs, and rollout of a vertical-wide skills marketplace for approved skill distribution
+          Architected a Claude Code skills marketplace with LLM security gating and SHA-pinned releases, adopted by the security org as the company-wide gate for approved skills
       }
     \resumeItemListEnd
 
@@ -232,13 +232,16 @@
 \begin{itemize}[leftmargin=0.15in, label={}, itemsep=0.1em]
 \small{
     \item{
-        \textbf{ML \& Decision Systems:} Contextual Bandits, Offline Policy Evaluation (OPE), Reinforcement Learning, LightGBM, CatBoost, Sample Weighting, Bayesian Inference
+        \textbf{ML \& Decision Systems:} Contextual Bandits, Offline Policy Evaluation, Reinforcement Learning, LightGBM, CatBoost, Bayesian Inference
     }
     \item{
-        \textbf{Production ML \& AI Infrastructure:} FastAPI, Databricks Apps/Jobs, GitHub Actions, Terraform, CI/CD, Model Deployment, MCP, LLM Workflows, Experimentation Platforms
+        \textbf{LLM \& Agent Systems:} LLM Evaluation, Trace Monitoring, Prompt Caching, Cost Attribution, MCP, AWS Bedrock
     }
     \item{
-        \textbf{Programming, Data \& Experimentation:} Python, SQL, Pandas, NumPy, PySpark, SciPy, Feature Engineering, Data Pipelines, Statistical Testing, A/B Testing
+        \textbf{Production \& Infrastructure:} FastAPI, TypeScript/React, Databricks, GitHub Actions, Terraform, New Relic, CI/CD
+    }
+    \item{
+        \textbf{Programming \& Experimentation:} Python, SQL, PySpark, Pandas, NumPy, Statistical Testing, A/B Testing
     }
 }
 \end{itemize}

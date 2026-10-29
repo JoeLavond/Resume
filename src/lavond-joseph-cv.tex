@@ -152,28 +152,28 @@
       {Red Ventures}{Fort Mill, SC}
       \resumeItemListStart
       \resumeItem{
-          Built and productionized ReplayOPE, an offline policy evaluation and experimentation platform for contextual bandits that surfaced stronger agent configurations in 75\%+ of experiments and generated automated recommendations for production decision systems
+          Authored the LLM cost-optimization roadmap for Kamino, RV's internal AI agent platform (15 business-unit installations, 120+ agents), and delivered its measurement and prompt-caching phases, cutting cost per model call $\sim$30\% ($\sim$\$65K/yr at current volume)
       }
       \resumeItem{
-          Evolved ReplayOPE from research proof-of-concept to internal ML product with FastAPI services, Databricks Apps, analyst-facing UI, MCP integration, usage tracking, and CI/CD via GitHub Actions and Terraform
+          Built production trace monitoring for Kamino agents that prioritizes conversations by implicit signals (trace errors) and explicit feedback (chat reactions), classifies failures, and turns them into eval cases and recommendations A/B validated against stored tests; live in 3 business units
+      }
+      \resumeItem{
+          Built and productionized ReplayOPE, an offline policy evaluation platform for contextual bandits (FastAPI, Databricks Apps, React UI, MCP); challenger configurations beat production baselines in 67\% of 54 analyses (3.2\% median lift), and a change-tracking pipeline links recommendations to production changes across 18 agents
       }
       \resumeItem{
           Developed advanced evaluation methods including combinatorially purged cross-validation, fold-based evaluation, warm starts, delayed rewards, streaming execution, concurrent runs, eligibility checks, and statistically rigorous policy comparison
       }
       \resumeItem{
-          Built ReplayOPE platform infrastructure across Databricks Jobs, Terraform-managed access, Repos synchronization, automated documentation deployment, environment promotion workflows, and API route generation
+          Hardened offline RL training infrastructure: fixed a 3-year missing-values bug and a 2-year policy-importance bug, and productionized CatBoost, ordinal encoding, and recency-based sample weighting, with Replay-estimated revenue lifts of up to 10\% on several agents
       }
       \resumeItem{
-          Improved core DAPI offline RL training and serving infrastructure by fixing a 3+ year missing-values inference bug, modularizing preprocessing pipelines, and expanding support for high-cardinality categorical features
+          Onboarded 20+ analysts and SMEs to ReplayOPE through live demos, docs, and API/MCP access, producing 18+ experiment runs across 6 clients within 3 weeks of the UI launch
       }
       \resumeItem{
-          Productionized CatBoost, ordinal LightGBM, and recency-based sample weighting / historical importance strategies across DAPI agents, with several agents observing +10 percentage-point revenue lift following adoption
+          Architected a Claude Code skills marketplace with LLM security gating and SHA-pinned releases, adopted by the security org as the company-wide gate for approved skills
       }
       \resumeItem{
-          Drove cross-functional adoption through analyst onboarding, product demos, searchable documentation, example workflows, and programmatic API/MCP access for LLM-driven tooling
-      }
-      \resumeItem{
-          Rolled out a vertical-wide skills marketplace as the source of truth for approved skills and distribution, including release workflows, CI checks, LLM security checks, approval gates, and reusable bootstrapping patterns
+          Managed and mentored a summer intern, whose main-branch commits rose from 2 to 44 after a midsummer coaching change; recommended for a full-time return offer
       }
       \resumeItemListEnd
 
@@ -320,7 +320,10 @@
         \textbf{Statistics \& Deep Learning:} Bayesian Inference, Experiment Design, Cross-Validation, Purged Cross-Validation, A/B Testing, Statistical Testing, Policy Comparison, PyTorch, TensorFlow, Keras
     }
     \item{
-        \textbf{ML Systems \& AI Infrastructure:} FastAPI, Databricks Apps/Jobs, DBRX, GitHub Actions, Terraform, CI/CD, Model Deployment, API Design, MCP, LLM Workflows, Skills Marketplaces
+        \textbf{LLM \& Agent Systems:} LLM Evaluation, Trace Monitoring, Prompt Caching, Cost Attribution, MCP, Claude Code Plugins, AWS Bedrock
+    }
+    \item{
+        \textbf{ML Systems \& Infrastructure:} FastAPI, TypeScript/React, Databricks Apps/Jobs, GitHub Actions, Terraform, New Relic, CI/CD, Model Deployment, API Design
     }
     \item{
         \textbf{Programming \& Data:} Python, SQL, R, Pandas, NumPy, PySpark, SciPy, Tidyverse, Feature Engineering, Data Pipelines, Data Quality \& Validation
